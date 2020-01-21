@@ -1,10 +1,11 @@
 # Fantasy Name Generator
 
-I have found coming up with fantasy names to be a massive pain in the ass, so I wrote this program to help me with that.
+The program generates a fantasy firstname and lastname.
 
-This program runs in Python, and requires Python 3+ to run. Not sure if Python of lower versions work, but it works on 3!
+It runs in Python 3+.
 
-The program takes the input of the length of the name the user wants, and generates it conforming to the following rules:
+
+It conforming to the following rules:
 
 Consider position x in string.
 
@@ -31,9 +32,3 @@ Consider position x in string.
 >>>a) If x-2 is consonant, set to either
 
 >>>b) If x-2 is vowel, set to consonant
-
-(Note that these rules are still being worked on.)
-
-See program's comments for (slightly) more detailed description.
-
-The program's still a work-in-progress, so don't expect too much. But it works, so hey, enjoy!
