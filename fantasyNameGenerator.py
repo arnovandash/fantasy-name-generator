@@ -16,18 +16,10 @@ def SetRnd(name, count): #returns random letter, whether consonant or vowel
                 IsValid = True
     return chosenChar
 
-def run():
-    #asks for length of name to generate
-    IsValid = False
-    while IsValid == False: #validates user input whether they're numeric and is greater than 0
-        length=unicode(input("Enter length of name to generate: "))
-        if (str(length) != "") and (length.isnumeric() == True) and (int(length) > 0):
-            IsValid = True
-            length = int(length)
+def name_gen(length):
     name=[] #create blank list
     count=0 #sets length counter to 0
     while (count < length):
-        print(str(count))
         if (count == length - 1): #if at final position
             if (name[count-1] in consonant): #if penultimate letter is consonant, finish with vowel! eg. -og
                 name.insert(count, random.choice(vowel))
@@ -57,10 +49,18 @@ def run():
                             name.insert(count, SetRnd(name, count))
                         else: #if -2 is vowel, set to consonant, eg. -oog-
                             name.insert(count, random.choice(consonant))
-        #print(str(name[count]))
         count = count + 1
-    print("Final name generated: " + "".join(name).upper())
-    print()
-    run() #recursive
-#declares initial running		
-run()
+    return ''.join(name).title()
+
+def run():
+    #asks for length of name to generate
+    while True:
+        input("Hit enter to generate a name...")
+        len_first=random.randint(2, 8)
+        len_last=random.randint(2, 8)
+        first = name_gen(len_first)
+        last = name_gen(len_last)
+        print("{} {}".format(first, last))
+
+if __name__ == "__main__":
+    run()
