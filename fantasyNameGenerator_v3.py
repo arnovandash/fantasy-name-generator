@@ -16,10 +16,10 @@ suffixes = ['son', 'wyn', 'ovich', 'ski', 'stein', 'dottir', 'berg', 'ford', 'ha
             'thane', 'wynn', 'ley', 'mont', 'more']
 
 def make_name():
-    part1 = random.choice(starts)
-    part2 = random.choice(middles)
-    part3 = random.choice(ends) if random.random() > 0.5 else ''
-    return part1 + part2 + part3
+    parts = [random.choice(starts), random.choice(middles)]
+    parts.append(random.choice(ends) if random.random() > 0.5 else '')
+    return ''.join(parts).capitalize()
+
 
 def make_surname():
     base = random.choice(elements + professions + colors)
@@ -27,13 +27,13 @@ def make_surname():
     suffix = random.choice(suffixes) if random.random() > 0.7 else ''
     
     components = [component for component in [modifier, base, suffix] if component]
-    return ''.join(components)
+    return ''.join(components).capitalize()
 
 def run():
     while True:
         input("Hit enter to generate a full name...")
-        first_name = make_name().capitalize()
-        last_name = make_surname().capitalize()
+        first_name = make_name()
+        last_name = make_surname()
         print(f"{first_name} {last_name}\n")
 
 if __name__ == "__main__":
