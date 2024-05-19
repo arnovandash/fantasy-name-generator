@@ -1,5 +1,5 @@
-consonant=('b','g','d','t','f','c','h','m','n','p','h','r','l','s','g','k','x','z','ph','sh','ch')
-vowel=('a','e','i','o','u','y')
+consonant = ('b', 'g', 'd', 't', 'f', 'c', 'h', 'm', 'n', 'p', 'r', 'l', 's', 'k', 'x', 'z', 'ph', 'sh', 'ch')
+vowel = ('a', 'e', 'i', 'o', 'u', 'y')
 
 import random
 
