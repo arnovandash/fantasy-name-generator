@@ -1,9 +1,18 @@
 import random
 
-syllables_start = ('Bl', 'Br', 'Cl', 'Cr', 'Dr', 'Tr', 'Fr', 'Fl', 'Gr', 'Gl', 'Pr', 'Pl', 'Sc', 'St', 'Sp', 'Sk', 'Sl', 'Kr', 'Kl')
-syllables_end = ('nd', 'ng', 'nt', 'nk', 'mp', 'rd', 'ld', 'lp', 'rk', 'lt', 'lf', 'pt', 'ct', 'ck', 'rt')
+#syllables_start = ('Bl', 'Br', 'Cl', 'Cr', 'Dr', 'Tr', 'Fr', 'Fl', 'Gr', 'Gl', 'Pr', 'Pl', 'Sc', 'St', 'Sp', 'Sk', 'Sl', 'Kr', 'Kl')
+#syllables_end = ('nd', 'ng', 'nt', 'nk', 'mp', 'rd', 'ld', 'lp', 'rk', 'lt', 'lf', 'pt', 'ct', 'ck', 'rt')
 #vowels = ('a', 'e', 'i', 'o', 'u', 'ai', 'au', 'oi', 'ou', 'ei', 'eu', 'ia', 'io', 'iu', 'ie', 'oa', 'oe', 'ua', 'ue', 'ui', 'uo', 'iy', 'ey', 'ay', 'ee', 'oo', 'aa', 'ae', 'ea', 'ie')
-vowels = ('a', 'e', 'i', 'o', 'u')
+#vowels = ('a', 'e', 'i', 'o', 'u')
+
+syllables_start = ('B', 'C', 'D' 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T',
+                   'V', 'W', 'X', 'Y', 'Z', 'Bl', 'Br', 'Cl', 'Cr', 'Dr', 'Tr', 'Fr', 'Fl', 'Gr',
+                   'Gl', 'Pr', 'Pl', 'Sc', 'St', 'Sp', 'Sk', 'Sl', 'Kr', 'Kl')
+#syllables_end = ('b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'nd', 'ng', 'nt', 'nk', 'mp', 'rd', 'ld', 'lp', 'rk', 'lt', 'lf', 'pt', 'ct', 'ck', 'rt')
+
+syllables_end = ('nd', 'ng', 'nt', 'nk', 'mp', 'rd', 'ld', 'lp', 'rk', 'lt', 'lf', 'pt', 'ct', 'ck', 'rt')
+vowels = ('a', 'e', 'i', 'o', 'u', 'ai', 'au', 'oi', 'ou', 'ei', 'eu', 'ia', 'io', 'iu', 'ie', 'oa', 'oe', 'ua', 'ue', 'ui', 'uo', 'iy', 'ey', 'ay', 'ee', 'oo', 'aa', 'ae', 'ea', 'ie')
+
 
 def make_syllable():
     part1 = random.choice(syllables_start) if random.random() > 0.4 else ''
